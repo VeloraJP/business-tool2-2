@@ -1,0 +1,54 @@
+@page {
+  size: A4;
+  margin: 12mm;
+}
+
+body {
+  min-width: 0;
+  overflow: visible;
+  background: #ffffff;
+}
+
+.app-shell {
+  max-width: none;
+  padding: 0;
+}
+
+.topbar,
+.app-footer {
+  display: none;
+}
+
+.welcome-card {
+  min-height: 0;
+  padding: 0;
+  border: 0;
+  box-shadow: none;
+}
+@media print {
+  .topbar,
+  .app-footer,
+  .sticky-actions,
+  .button,
+  .data-tools,
+  .mode-select {
+    display: none !important;
+  }
+
+  .app-shell,
+  .view {
+    max-width: none;
+    padding: 0;
+  }
+
+  .category-panel,
+  .kpi-card {
+    break-inside: avoid;
+    box-shadow: none;
+  }
+
+  .category-input-grid,
+  .category-card-grid {
+    display: none;
+  }
+}

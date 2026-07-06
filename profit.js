@@ -1,0 +1,8 @@
+import * as formula from "../formulas/investment-return.js";
+import { calculateMonetaryNumbers, calculateNumbers } from "./validation.js";
+
+export const calculateOperatingProfitAfterRunningCost = (annualOperatingProfitIncrease, annualRunningCost) => calculateMonetaryNumbers(formula.operatingProfitAfterRunningCost, { annualOperatingProfitIncrease, annualRunningCost }, { annualOperatingProfitIncrease: { nonNegative: true }, annualRunningCost: { nonNegative: true } });
+export const calculateIncrementalOperatingProfit = (annualOperatingProfitAfterInvestment, annualOperatingProfitBeforeInvestment, annualRunningCost) => calculateMonetaryNumbers(formula.incrementalOperatingProfit, { annualOperatingProfitAfterInvestment, annualOperatingProfitBeforeInvestment, annualRunningCost }, { annualRunningCost: { nonNegative: true } });
+export const calculatePaybackPeriod = (investmentAmount, annualIncrementalCashFlow) => calculateNumbers(formula.paybackPeriod, { investmentAmount, annualIncrementalCashFlow }, { investmentAmount: { nonNegative: true }, annualIncrementalCashFlow: { positive: true } });
+export const calculateReturnOnInvestment = (annualIncrementalOperatingProfit, investmentAmount) => calculateNumbers(formula.returnOnInvestment, { annualIncrementalOperatingProfit, investmentAmount }, { investmentAmount: { positive: true } });
+export const calculateRequiredAnnualOperatingProfit = (investmentAmount, targetPaybackYears) => calculateMonetaryNumbers(formula.requiredAnnualOperatingProfit, { investmentAmount, targetPaybackYears }, { investmentAmount: { nonNegative: true }, targetPaybackYears: { positive: true } });

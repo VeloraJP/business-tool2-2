@@ -1,0 +1,10 @@
+{
+  "name": "management-analysis-tool",
+  "version": "1.0.0-phase0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "test": "node --test",
+    "check": "node --test"
+  }
+}

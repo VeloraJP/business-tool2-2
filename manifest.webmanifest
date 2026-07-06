@@ -1,0 +1,16 @@
+{
+  "name": "経営分析レポートメーカー Pro",
+  "short_name": "経営分析",
+  "description": "3期の財務数値を業界平均・課税区分と比較して分析する経営レポートツール",
+  "lang": "ja",
+  "start_url": "./index.html",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "any",
+  "background_color": "#f1f3ef",
+  "theme_color": "#185c4a",
+  "icons": [
+    {"src":"./icon.svg","sizes":"any","type":"image/svg+xml","purpose":"any maskable"},
+    {"src":"./apple-touch-icon.png","sizes":"180x180","type":"image/png","purpose":"any"}
+  ]
+}
